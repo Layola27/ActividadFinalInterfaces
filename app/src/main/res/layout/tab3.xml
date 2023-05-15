@@ -64,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="131dp"
                         android:padding="16dp"
-                        android:text="The 48 laws of power.         "
+                        android:text="The 48 Laws of Power is a non-fiction book by American author Robert Greene. "
                         android:textSize="15sp" />
 
                     <LinearLayout
@@ -120,7 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="134dp"
                         android:padding="7dp"
-                        android:text="Good strategy, bad strategy,"
+                        android:text="Even though everyone is talking about it, there is no concept in business today more muddled than 'strategy'."
                         android:textSize="15sp" />
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,8 +175,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="132dp"
                         android:padding="7dp"
-                        android:text="Thinking strategically"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        android:text="The Competitive Edge in Business, Politics, and Everyday Life is a non-fiction book by Indian-American economist Avinash Dixit and Barry Nalebuff."
                         android:textSize="15sp" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
@@ -228,7 +230,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="129dp"
                         android:padding="7dp"
-                        android:text="Dune"
+                        android:text="Dune is a 1965 epic science fiction novel by American author Frank Herbert, originally published as two separate serials in Analog magazine."
                         android:textSize="15sp" />
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -281,7 +283,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="129dp"
                         android:padding="7dp"
-                        android:text="Stolen description"
+                        android:text="Stolen is the debut novel of author Lucy Christopher. It was published in the UK in 2009 and is the story of Gemma Toombs,..."
                         android:textSize="15sp" />
                     <LinearLayout
                         android:layout_width="match_parent"
