@@ -3,19 +3,19 @@ package com.example.activity3v1;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
@@ -28,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
     Button info;
     Button menu;
     Button menuButton;
+    ImageView add;
     DrawerLayout drawer;
-
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(MainActivity.this, Activity3Library.class));
+        startActivity(new Intent(MainActivity.this, tab1fragment.class));
         finish();
 
     }
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +45,17 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
         menu = findViewById(R.id.menu);
-
+        add = findViewById(R.id.add);
         getTabs();
         openMenu();
-
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://www.audible.es/?gclsrc=aw.ds&&source_code=GGLTM1220926200001&ipRedirectOverride=true&gclid=Cj0KCQjwsIejBhDOARIsANYqkD2_8fJ6iGY3AQflFgRcC6qrv4_KxfDQmw4OZ9uPJ9kyPTC_O-1PsEwaAj6bEALw_wcB");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
         //joan
         menuButton = findViewById(R.id.menu);
         drawer = findViewById(R.id.drawer_layout);
@@ -75,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.nav_item_1:
                         // Handle the Cart item click
-                        Intent orderDetailsIntent = new Intent(MainActivity.this, OrderDetails.class);
+                        Intent orderDetailsIntent = new Intent(MainActivity.this, Profile.class);
                         startActivity(orderDetailsIntent);
                         return true;
                     case R.id.nav_item_2:
@@ -91,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    /*
+    public void openAdd(){
+
+    }*/
     public void openMenu(){
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,32 +108,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void openTopCart() {
-        Intent intent = new Intent(this, OrderDetails.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(intent);
-    }
-    private void openTopInfo() {
-        Intent intent = new Intent(this, ActivityInfo.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(intent);
-    }
-
-
-    public void openInfo(){
-        info.setOnClickListener(view -> {
-            diaplayToast("Info");
-            openTopInfo();
-        });
-    }
-    public void openCart(){
-        cart.setOnClickListener(view -> {
-
-            diaplayToast("Cart Opened");
-            openTopCart();
-        });
-    }
-
     public void getTabs(){
        final ViewPagerAdapter ViewPagerAdapter= new ViewPagerAdapter(getSupportFragmentManager());
         new Handler().post(new Runnable() {
@@ -140,32 +123,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-
-
     public void diaplayToast(String Message){
         Toast.makeText(getApplicationContext(), Message,
                 Toast.LENGTH_SHORT).show();
     }
-
-    /*public void lawPowerOrder(View view) {
-        diaplayToast(getString(R.string.lawPower_order_Message));
-    }
-    public void GoodstratergyOrder(View view) {
-        diaplayToast(getString(R.string.Goodstratergy_order_Message));
-    }
-    public void DuneOrder(View view) {
-        diaplayToast(getString(R.string.Dune_order_Message));
-    }
-    public void MartianOrder(View view) {
-        diaplayToast(getString(R.string.Martian_order_Message));
-    }
-
-    public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message,
-                Toast.LENGTH_SHORT).show();
-    }*/
 
 }

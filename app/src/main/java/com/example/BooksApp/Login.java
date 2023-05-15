@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
-public class Activity1Login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     private MaterialButton Login;
     private EditText password;
     private EditText username;
@@ -28,7 +28,7 @@ public class Activity1Login extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Activity1Login.super.onBackPressed();
+                        com.example.activity3v1.Login.super.onBackPressed();
                     }
                 })
                 .setNegativeButton("No", null)
@@ -38,7 +38,7 @@ public class Activity1Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity1_login);
+        setContentView(R.layout.login);
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);

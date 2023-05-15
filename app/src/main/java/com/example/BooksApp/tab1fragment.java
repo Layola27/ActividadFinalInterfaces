@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class tab1fragment extends Fragment {
+public class    tab1fragment extends Fragment {
     private ImageView img1;
     public static tab1fragment getInstance(){
         tab1fragment tab1fragment = new tab1fragment();

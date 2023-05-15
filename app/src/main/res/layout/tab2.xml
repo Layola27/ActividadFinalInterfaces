@@ -26,15 +26,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <Button
                 android:id="@+id/viewCartButton"
                 android:layout_width="51dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="16dp"
+                android:layout_gravity="end"
                 android:background="@drawable/ic_baseline_local_grocery_store_24"
                 android:textColor="#FFFFFF" />
 
@@ -43,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="New arrivals"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -152,6 +152,8 @@
                 android:padding="5dp"
                 android:text="Most Read"
                 android:textSize="30sp"
+                android:textColor="@color/white"
+
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -258,6 +260,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Discounts"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -341,10 +344,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
-
                         android:orientation="vertical">
-
-
                         <Button
                             android:id="@+id/daemonAudiobtn"
                             android:layout_width="140dp"

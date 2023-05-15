@@ -13,14 +13,7 @@
         android:theme="@style/Theme.Activity3v1"
         tools:targetApi="31">
         <activity
-            android:name=".UF2Activity1Part2"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".UF2Activity1Part1"
+            android:name=".Profile"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -48,18 +41,16 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Activity1Login"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
     </application>
-
 </manifest>
